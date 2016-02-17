@@ -13,7 +13,7 @@ MiniRouter
 import HTTPServer
 import MiniRouter
 
-get("/") { _
+get("/") { _ in
     return Response(body: "hello")
 }
 
