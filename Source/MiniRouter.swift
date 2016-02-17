@@ -22,13 +22,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-@_exported import TrieRouteMatcher
+@_exported import RegexRouteMatcher
 
 public var miniRouter = MiniRouter()
 
 public final class MiniRouter: RouterType {
     public let middleware: [MiddlewareType] = []
-    public var matcher: RouteMatcherType = TrieRouteMatcher(routes: [])
+    public var matcher: RouteMatcherType = RegexRouteMatcher(routes: [])
     public var fallback: ResponderType = Responder { _ in
         return Response(status: .NotFound)
     }
@@ -79,5 +79,5 @@ func _methods(m: Set<Method>, path: String, middleware: [MiddlewareType], respon
         middleware: middleware,
         responder: Responder(respond: respond)
     )
-    miniRouter.matcher = TrieRouteMatcher(routes: miniRouter.matcher.routes + [route])
+    miniRouter.matcher = RegexRouteMatcher(routes: miniRouter.matcher.routes + [route])
 }

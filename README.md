@@ -13,8 +13,27 @@ MiniRouter
 import HTTPServer
 import MiniRouter
 
-get("/") { _ in
-    return Response(body: "hello")
+get("/users") { _ in
+    return Response(body: "all users")
+}
+
+post("/users") { _ in
+    return Response(body: "created user")
+}
+
+get("/users/:id") { request in
+    let id = request.pathParameters["id"]!
+    return Response(body: "got user \(id)")
+}
+
+put("/users/:id") { request in
+    let id = request.pathParameters["id"]!
+    return Response(body: "updated user \(id)")
+}
+
+delete("/users/:id") { request in
+    let id = request.pathParameters["id"]!
+    return Response(body: "deleted user \(id)")
 }
 
 try Server(responder: miniRouter).start()
