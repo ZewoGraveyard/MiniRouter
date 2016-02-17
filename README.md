@@ -5,7 +5,7 @@ MiniRouter
 [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://tldrlegal.com/license/mit-license)
 [![Slack Status](https://zewo-slackin.herokuapp.com/badge.svg)](http://slack.zewo.io)
 
-**MiniRouter** is small router for Zewo.
+**MiniRouter** is a small router for Zewo. It should be used for really small web apps. If you plan to create a full-fledged web app you should use [Router](https://github.com/Zewo/Router). [Router](https://github.com/Zewo/Router) has a lot more features and is much more flexible.
 
 ## Usage
 
