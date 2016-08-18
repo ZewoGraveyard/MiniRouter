@@ -1,4 +1,4 @@
-MiniRouter
+[Deprecated] MiniRouter
 ==========
 
 [![Zewo 0.3](https://img.shields.io/badge/Zewo-0.3-FF7565.svg?style=flat)](http://zewo.io)
